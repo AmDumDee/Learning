@@ -1,0 +1,1428 @@
+
+
+
+Index
+
+1. Executive Summary
+2. Methodology & Scope
+3. Threat Landscape Overview
+4. General Key Trends
+5. Sectoral Analysis
+6. Cybercrime Ecosystem
+7. State-Aligned Activities
+8. Foreign Information Manipulation
+9. Hacktivism
+10. TTPs & Vulnerabilities
+11. Key Recommendations
+---
+
+1. Executive Summary
+
+
+Report Context
+
+- Reporting Period: July 2024 - June 2025
+- Incidents Analyzed: 4,875 curated incidents
+- Geographic Focus: European Union Member States
+- Format: Revised threat-centric approach with enhanced contextualization
+
+Key Findings
+
+Threat Distribution
+- Hacktivism: 79% of incidents (primarily DDoS attacks)
+- Intrusions: 17.8% (dominated by cybercrime)
+- State-aligned activities: 7.2% (cyberespionage focus)
+- Defacements: Minimal, exclusively hacktivist-linked
+Primary Threat Vectors
+1. Phishing: 60% of intrusion cases
+2. Vulnerability Exploitation: 21.3%
+3. Botnets: 9.9%
+4. Malicious Applications: 8%
+Critical Observations
+- Ransomware remains at the core of intrusion activity
+- Supply chain attacks intensifying
+- Mobile device targeting increasing
+- AI adoption accelerating across all threat actor types
+- Threat actor convergence blurring traditional boundaries
+---
+
+2. Methodology & Scope
+
+
+Data Collection Framework
+
+Sources
+- Open-source intelligence (primary)
+- Anonymized data from EU Member States
+- ENISA Cyber Partnership Programme members
+- EEAS STRATCOM (for FIMI analysis)
+Limitations & Caveats
+- Open-source reporting depth varies
+- Temporal delays (cyberespionage campaigns: 6 months - 4+ years)
+- Geographic/sectoral vagueness in some reports
+- Audience interest influences reporting frequency
+Quality Control
+- Thorough dataset curation
+- Single-sector categorization to avoid inflation
+- Use of estimative probability language for assessments
+
+Analytical Approach
+
+Attribution Standards
+- Based on public attributions from national authorities
+- Technical imputation by trusted private vendors
+- Clear distinction between "nexus" and confirmed attribution
+FIMI Methodology
+- Sample limited to known Russian-linked operations
+- Not representative of all FIMI activity
+- Illustrative rather than comprehensive
+---
+
+3. Threat Landscape Overview
+
+
+Intrusion Vector Analysis
+
+Phishing Dominance
+- Volume: 60% of observed cases
+- Impact Profile:
+	- 73% unclear follow-up activities
+	- 27% led to confirmed intrusions
+	- 23% deployed malicious code
+- Assessment: Primary for malware-less objectives
+Vulnerability Exploitation
+- Volume: 21.3% of cases
+- Impact Profile:
+	- 70% culminated in intrusions
+	- 68% resulted in malware deployment
+- Assessment: Direct precursor to malware installation
+
+Incident Type Distribution
+
+DDoS Attacks: 76.7%
+- Overwhelmingly hacktivist-driven
+- Minimal cybercrime contribution (extortion-related)
+Intrusions: 17.8%
+- Dominated by cybercriminal activities
+- State-aligned focus on persistence
+- Hacktivist involvement marginal
+Defacements: <1%
+- Almost exclusively hacktivist
+- Symbolic rather than sustained intrusion
+
+Malicious Code Deployment
+
+Ransomware, Banking Trojans, Infostealers: 87.3% of intrusion-deployed malware
+Intrusion Outcomes
+- Data Breaches: 68.6% (2.8% ransomware-direct)
+- Data Exfiltration: 30.2%
+	- Credential theft: 8.9%
+	- Strategic data collection: 21.3%
+
+Threat Category Focus
+
+Mobile Threats: 42.4%
+- Largest attack surface
+- Android devices primarily targeted
+Web Threats: 27.3%
+- Persistent online service exploitation
+Operational Technology: 18.2%
+- Growing exposure of industrial systems
+Supply Chain: 10.6%
+- Third-party pathway exploitation
+
+Assessed Objectives
+
+Ideology-Driven: Largest share (hacktivist DDoS)
+Financial Motivation: Primarily cybercriminal
+Cyberespionage: 7.2% but high-impact
+---
+
+4. General Key Trends
+
+
+4.1 Phishing Evolution
+
+ClickFix-Style Scams
+- Emerged during reporting period
+- Gained momentum Q1 2025
+- Used by cybercriminal AND state-aligned actors
+- Technique: Fake CAPTCHA prompts → PowerShell execution
+- Outcome: Infostealer and loader deployment
+WordPress Weaponization
+- Compromised sites for drive-by downloads
+- ClearFake campaign: 9,300 confirmed infections
+- Malware: Lumma, Vidar credential stealers
+- Leverages legitimate browser interfaces
+Phishing-as-a-Service (PhaaS)
+- Darcula: 200+ organizations impersonated, 100+ countries
+- Lucid: Mobile messaging (iMessage, RCS), 169 targets in 88 countries
+- FlowerStorm: AITM kit, Microsoft 365 mimicry, MFA bypass
+QR Code Phishing (Quishing)
+- Scanception campaign: QR codes in PDF attachments
+- Redirects to credential harvesting on trusted cloud platforms
+- Evades endpoint protections and email filtering
+
+4.2 Cyber Dependencies Under Attack
+
+Third-Party Provider Targeting
+Notable Incidents:
+- Operation Digital Eye (Mid-2024): IT providers in Southern Europe
+- Plus Service (March 2025): Italian transport platform breach
+	- Impact: Mobilita di Marca ticketing paralyzed (2 days, thousands affected)
+	- Busitalia Veneto app and ATM Milano affected
+- BVG Berlin (May 2025): 180,000 customer records compromised
+- Repsol Spain: Customer data via provider compromise
+Digital Supply Chain Exploitation
+Software & Repository Compromise:
+- Lazarus (DPRK-nexus):
+	- Malicious npm packages in GitHub
+	- Mimics legitimate libraries
+	- Targets developer environments
+	- Secret sprawl: 25% increase (2023-2024)
+Browser Extensions:
+- Late 2024 surge in malicious extensions
+- AI and VPN extensions targeted
+- Multiple company extensions compromised
+
+4.3 Mobile Device Targeting
+
+Android Threats (Q1 2025 Uptick)
+Notable Malware:
+- Rafel RAT: Outdated device exploitation (CZ, FR, DE, IT, RO)
+- Medusa Banking Trojan: ODF/ATO focus (FR, IT expansion)
+- BingoMod RAT: Account draining + device wiping
+State-Aligned Spyware:
+- KoSpy (Reaper): Android surveillance
+- BoneSpy & PlainGnome (Sandcat, Uzbekistan-nexus)
+- EagleMsgSpy: Chinese legal intercept program (since 2017)
+Messaging App Targeting
+Russia-nexus Operations (February 2025):
+- Sandworm: WhatsApp, Signal, Telegram targeting in Ukraine
+	- Battlefield device exploitation
+	- QR code-based account linking
+	- WAVESIGN operation
+- CozyLarch/Storm-2372: Signal spearphishing campaigns
+Infrastructure Vulnerabilities
+- Qualcomm DSP software vulnerability (October 2024)
+- SS7 and Diameter protocol exploitation
+- China Mobile International & China Telecom Global surveillance capabilities
+
+4.4 Threat Group Convergence
+
+Blurring Boundaries
+Faketivism:
+- Cyber Army of Russia Reborn: Linked to Sandworm
+- CyberAv3ngers: Iran IRGC connection
+Hacktivist-to-Ransomware Pivot:
+- FunkSec: FunkLocker ransomware (late 2024)
+- CyberVolk: Multiple strains (AzzaSec, HexaLocker, Parano, LockBit, Chaos)
+- KillSec: RaaS platform launch (June 2024)
+False Flag & Masquerading
+- Turla takeover of Transparent Tribe infrastructure
+- Email extortion impersonating CL0P
+- Physical ransom letters spoofing BianLian
+State-Nexus Adopting Cybercrime Tools
+- DPRK Kimsuky: ClickFix technique
+- DPRK Andariel: Play ransomware (likely affiliate/IAB)
+- DPRK Moonstone Sleet: Qilin ransomware
+- China APT29 & Sandworm: Commercial residential proxy networks
+- China NailoLocker: EU health sector (June-October 2024)
+- China Mustang Panda: RA ransomware
+Hybrid Campaigns
+- Romania election interference (November 2024)
+- EU-based sabotage recruitment via Telegram
+- Physical attacks coordinated with cyber operations
+
+4.5 AI in Threat Landscape
+
+Offensive AI Adoption
+Phishing Enhancement:
+- 80%+ of phishing emails (Sep 2024 - Feb 2025) AI-assisted
+- Voice cloning for vishing
+- Deepfakes for online fraud impersonation
+Malware Development:
+- Jailbroken LLMs (WormGPT, EscapeGPT, FraudGPT)
+- Automate social engineering
+- Accelerate tool development
+State-Nexus Usage:
+- China, Iran, DPRK using Gemini and ChatGPT
+- Research assistants for reconnaissance
+- Anomaly detection evasion
+- Famous Chollima: Convincing LinkedIn profiles
+AI as Lure
+- Fraudulent AI tool websites
+- Malware disguised as AI installers
+- Kling AI, Luma AI, Canva Dream Lab, DeepSeek-R1 impersonations
+AI Supply Chain Targeting
+- Poisoned ML models
+- Trojanized PyPI packages
+- "Rules File Backdoor" for AI coding assistants
+- "Slopsquatting" term introduced
+AI System Vulnerabilities
+- Langflow RCE vulnerability
+- Microsoft 365 Copilot vulnerabilities
+- ChatGPT SSRF (CVE-2024-27564)
+---
+
+5. Sectoral Analysis
+
+
+Top 5 Targeted Sectors (EU)
+
+1. Public Administration: 38.2%
+2. Transport: 7.5%
+3. Digital Infrastructure & Services: 4.8%
+4. Finance: 4.5%
+5. Manufacturing: 2.9%
+Note: 28.5% unspecified/unknown sector
+
+5.1 Public Administration (38%)
+
+Geographic Distribution
+- France: 27%
+- Italy: 26.3%
+- Germany: 16.2%
+- Spain: 15.3%
+- Poland: 15.1%
+Entity Breakdown
+- Regional: 24.4%
+- Central: 15.1% 
+	- Defence/military: 2.4%
+	- Intelligence/security: 2.4%
+	- Law enforcement: 0.9%
+	- Political parties: 0.1%
+	- Diplomatic missions: 1.4%
+- Union entities: 0.7%
+- NATO Enterprise: 0.7%
+Threat Profile
+- DDoS: 96.2% (hacktivist-dominated)
+- Ransomware: 2.2%
+	- Top strains: NightSpire (41.7%), SafePay (33.3%), Stormous (25%)
+	- LockBit absent (Operation Cronos impact)
+- Data Breaches: 17% of all recorded breaches
+Most Active Threat Actors
+- NoName057(16): 66.7%
+- Dark Storm: 20%
+- Keymous+: 13.3%
+State-Nexus Focus
+- 77 incidents (highest for state actors)
+- China-nexus: Foreign affairs, municipal administrations
+- Russia-nexus: Diverse (diplomatic, ministries, law enforcement, political parties)
+- India-nexus: Diplomatic entities, governmental organizations
+
+5.2 Transport (7.5%)
+
+Subsector Distribution
+- Air transport: 58.4%
+- Logistics: 20.8%
+Threat Profile
+- DDoS: 87.6%
+- Cybercrime: 8.4%
+	- Ransomware: 83.9% of cybercrime
+	- Data breaches: 16.1% of cybercrime
+Top Ransomware
+- Akira: 12.9%
+- INC Ransom: 9.7%
+- Cl0p: 9.7%
+Notable Incidents
+- Split Airport, Croatia (Akira): Flight suspensions
+- Plus Service Italy: Telemaco platform breach
+Most Active Threat Actors
+- NoName057(16): 36.4%
+- DarkStorm Team: 15.4%
+- Mysterious Team Bangladesh: 6.2%
+State-Nexus Focus (4.1%)
+- China-nexus: Maritime, shipping, logistics (UNC5221, Mustang Panda, APT41)
+	- Belt & Road Initiative alignment
+- Russia-nexus: Air transport, logistics, freight (APT28)
+	- NATO infrastructure targeting
+- DPRK Lazarus: Strategic data for sanctions evasion
+
+5.3 Digital Infrastructure & Services (4.8%)
+
+Subsector Distribution
+- Telecommunications: 25.1%
+- Digital Service Providers: 13.4%
+Threat Profile
+- DDoS: 57.5%
+- Cybercrime: 34.3%
+	- Data breaches: 38%
+	- Top ransomware: Cl0p (9.8%), FOG, Qilin (6.5%)
+Most Active Threat Actors
+- NoName057(16): 33.8%
+- Keymous+: 21.4%
+- Mr Hamza: 6.5%
+State-Nexus Focus (8.2%)
+- Russia-nexus dominant: APT29, APT28
+	- IT service providers
+	- Telecommunications
+- DPRK Famous Chollima: IT workers, software developers
+	- DeceptiveDevelopment campaign
+- China Salt Typhoon: Telecommunications infrastructure
+	- Active December 2024 - 2025
+	- 3+ EU Member States impacted
+
+5.4 Finance (4.7%)
+
+Subsector Distribution
+- Banking: 21.6%
+- Insurance: 3.4%
+- Blockchain: <1%
+Threat Profile
+- DDoS: 83.5%
+- Cybercrime: 14.8%
+	- Data breaches: 64%
+	- Ransomware: 36%
+- State-aligned: 1.7%
+Top Ransomware
+- Akira: 20%
+- Datacarry: 12%
+- BlackLock: 4%
+Most Active Threat Actors
+- NoName057(16): 71.1%
+- Keymous+: 13.7%
+- DarkStorm Team: 15.2%
+State-Nexus
+- DPRK Lazarus (historical threat)
+- China-nexus (2 incidents, emerging)
+
+5.5 Manufacturing (2.9%)
+
+Subsector Focus
+- Defence-related entities
+- Automotive entities
+- 94% unidentified subsector
+Threat Profile
+- Cybercrime: 59.3%
+	- Data breaches: 20.5%
+	- Top ransomware: Akira (48.7%), Qilin (20.5%), FOG (10.3%)
+- Hacktivism: 39.3%
+- State-aligned: Minimal
+Notable Incidents
+- Medion AG (BlackBasta, November 2024): IT/website disruptions
+- Arntz Optibelt Group (August 2024): IT system impact
+Most Active Threat Actors
+- NoName057(16): 75.6%
+- Focus: Defence supply chains
+State-Nexus
+- UNC5221 (China): Germany operations
+- Unidentified China-nexus: PurpleHaze, ShadowPad clusters
+	- 70+ global targets (July 2024 - March 2025)
+	- IP theft likely
+---
+
+6. Cybercrime Ecosystem
+
+
+Overview
+
+- Share of incidents: 13.4%
+- Ransomware: 81.1% of cybercrime
+- Data breaches: 15.2% (from ransomware)
+
+6.1 Key Threats
+
+Ransomware Landscape
+Fragmentation & Evolution:
+- 82 ransomware variants deployed against EU
+- Continuous emergence of new RaaS programs
+- Major groups disrupted but quickly replaced
+Top Strains:
+1. Akira: 11.6%
+2. SafePay: 10.1%
+3. Qilin: 7.5%
+Major Disruptions:
+- LockBit3: Database leaked (May 2025), ceased operations
+	- LockBit4 emerged (April 2025, Syrphid operator)
+- BlackBasta: Internal chats leaked (February 2025), infrastructure offline since January
+- 8Base: Partial leaks, administrator arrests (early 2025)
+- RansomHub: Offline (April 1, 2025)
+Info-stealers Market
+Operation Magnus Impact (October 2024):
+- RedLine and META dismantled
+- Lumma Stealer surge: 350% increase H2 2024
+- 394,000 Windows machines (March-May 2025)
+- Strong EU prevalence
+Lumma Characteristics:
+- C-language MaaS model
+- Available since August 2022
+- EXE, DLL, PowerShell loader capabilities
+- Used by ransomware operators and state-nexus
+Law Enforcement Response:
+- May 2025: 2,300 malicious domains seized
+- Operations resumed days later
+Data Breaches
+High-Profile EU Cases:
+- Netherlands: 62,000+ police staff contact details
+- Belgium: 3.2 million WhatsApp users
+- France: 15,000 Direct Assurance customers
+- Sweden: Nokia source code/credentials via third-party
+Initial Access Brokers (IAB)
+- Shift to lower-cost, higher-volume sales
+- Most access <€2,800
+- VPN access sales surged (2024)
+- PII and RDP sales stable
+Online Scams & Fraud
+Notable Cases:
+- Poland: International group, €570,000 fraud
+- Vigorish Viper (China): Illegal gambling, European stadiums advertising
+	- Links to human trafficking, cyber fraud compounds (Southeast Asia)
+
+6.2 Sectoral Impact
+
+Most Targeted Sectors
+1. Digital Infrastructure & Services: 13.7%
+2. Manufacturing: 13.26%
+3. Business Services: 9.7%
+Ransomware Focus
+- Manufacturing: 14.9%
+- DIS: 10.3%
+Data Breach Focus
+- DIS: 28.2%
+- Public Administration: 16.8%
+Impact Examples
+- French media industry: 3 incidents <2 months
+- German healthcare: Medical procedure postponements
+
+6.3 Geographic Impact
+
+Top 5 EU Member States
+1. Germany: 23.4%
+2. Italy: 11.33%
+3. Spain: 9.8%
+4. France: 9.5%
+5. Belgium: 3.7%
+Country-Specific Patterns
+Germany:
+- Top strains: SafePay, INC Ransom, Akira
+- Focus: Manufacturing, digital services
+Italy:
+- Top strains: Akira, Sarcoma, Qilin
+- Focus: Manufacturing, DIS
+Spain:
+- Top strains: Qilin, Akira, FOG
+- Focus: Manufacturing, business services, public admin
+France:
+- Top strains: Qilin, Hunters International, CL0P
+- Focus: Manufacturing, DIS
+Belgium:
+- Top strains: RansomHouse, Play, SafePay, Qilin
+- Focus: Manufacturing, DIS
+
+6.4 Key Trends
+
+TTPs Evolution
+Leaked Builder Reuse:
+- SafePay suspected LockBit3 derivative
+- VanHelsing RaaS source code published (May 2025)
+Delivery Mechanisms:
+- Fake CAPTCHA pages
+- Cloud file hosting
+- Video platform embedded links
+EDR Evasion Tools:
+- AvNeutralizer/AuKill (FIN7, July 2024)
+- EDRKillShifter (RansomHub, August 2024)
+	- Variants in LockBit, Medusa, BlackCat/ALPHV toolsets
+- TDSSKiller usage
+- HeartCrypt-packed loader with ABYSSWORKER driver
+- HRSworld legitimate tool abuse
+Pressure Tactics:
+- Countdown timers
+- Victim profiles
+- Downloadable sample files
+- Qilin "call lawyer" feature: Legal escalation mimicry
+Ecosystem Evolution
+Law Enforcement Operations:
+Date
+Operation
+Target
+Impact
+Sep 2024
+Ghost takedown
+Encrypted communications
+Multiple arrests
+Oct 2024
+Magnus
+RedLine, META infostealers
+Arrests, server seizures
+Feb 2025
+-
+8Base/Phobos leaders
+4 arrests, activity reduced
+May 2025
+Endgame Phase 2
+7 malware families
+IAB infrastructure neutralized
+May 2025
+Macefall
+Lumma Stealer
+2,300+ domains seized
+Targeted Malware:
+- Bumblebee, Lactrodectus, Qakbot, Hijackloader, DanaBot, Trickbot, Warmcookie
+Other Takedowns:
+- Cracked, Nulled, BreachForums forums
+- Cryptocurrency exchanges (money laundering)
+- Vishing networks (Portugal/Spain, 54 arrests)
+- Phishing network (Sep 10-17): 1.2M stolen phones, 17 arrests
+Pig-Butchering Scams
+- 40% year-on-year growth (2024)
+- €9.1-11.4 billion generated
+- 33%+ of global crypto scam revenue
+- AI and deepfake integration
+- 2M+ accounts taken down (late 2024)
+- Physical targeting evolution: 
+	- Crypto holder kidnappings
+	- Exchange data leak exploitation
+	- Cases in Belgium, France, Spain
+---
+
+7. State-Aligned Activities
+
+
+Overview
+
+- Share of incidents: 7.2%
+- 46 distinct intrusion sets active in EU
+- 14.2% unidentified intrusion sets
+
+7.1 Key Threats by Nexus
+
+Russia-Nexus (Most Active)
+Top Intrusion Sets:
+1. APT29 (CozyLarch)
+2. APT28
+3. Sandworm
+Sectoral Focus:
+- Public administration (governmental, diplomatic)
+- Defence sector
+- Digital infrastructure
+Geographic Focus:
+- Poland, France, Germany, Belgium, Greece
+Notable Campaigns:
+APT29:
+- Microsoft compromise aftermath (January 2024)
+- Rogue RDP campaign (global, August 2024+) 
+	- EU MSs, ESA, NATO Enterprise targeted
+	- Amazon/Microsoft service impersonation
+- Wine tasting spearphishing (resumed)
+APT28:
+- Spearphishing: Transport, defence, logistics, telecommunications
+- Political parties and institutions
+- Ubiquiti EdgeRouter exploitation
+- Nearest-neighbor Wi-Fi attack
+Sandworm:
+- Energy vertical mandate
+- Gas storage entity (EU MS)
+- Natural gas conference attendees
+- WhatsApp/Signal/Telegram targeting (Ukraine)
+Turla:
+- Long-standing campaign (January 2024 - May 2025)
+- Single EU MS governmental focus
+- KAZUAR backdoor via compromised WordPress
+China-Nexus (Second Most Active)
+Top Intrusion Sets:
+1. UNC5221 (Volt Typhoon overlap)
+2. Mustang Panda
+3. APT41
+4. Flax Typhoon
+5. Salt Typhoon
+Sectoral Focus:
+- Public administration
+- Transport (maritime, shipping, logistics)
+- Civil society
+- Digital infrastructure (telecommunications)
+Geographic Focus:
+- Italy, Germany, France, Belgium
+Strategic Drivers:
+- Belt & Road Initiative
+- Made in China 2025 (MIC 2025)
+- Supply chain security
+- Trade infrastructure visibility
+Notable Campaigns:
+UNC5221:
+- ORB networks via edge device compromise
+- Telecommunications, manufacturing, aerospace, public admin
+Flax Typhoon:
+- Quad7 botnet
+- Thousands of TP-Link routers (Europe)
+Mustang Panda & APT41:
+- Maritime and shipping industries
+- Updated TTPs and toolsets
+- Government/defence event targeting
+Salt Typhoon:
+- Telecommunications exclusive focus
+- Active December 2024 - 2025
+- 3+ EU MSs impacted
+- Advanced persistent campaigns
+DPRK-Nexus (Third Most Active)
+Top Intrusion Sets:
+1. Famous Chollima
+2. Lazarus
+3. Kimsuky
+Geographic Focus:
+- Belgium, Italy, Germany, France
+Sectoral Focus:
+- Private companies (HR, finance, crypto, technology)
+- Defence, aerospace, media, health, energy
+Notable Campaigns:
+Famous Chollima:
+- IT worker employment scam (global)
+- Defence/government-related entities
+- Increased EU activity Q4 2024+
+- Dual objectives: Cyberespionage + extortion
+- AI-generated LinkedIn profiles
+Lazarus:
+- Job-themed campaigns
+- Defence, aerospace, media, health, energy sectors
+- Supply chain compromise (npm packages)
+Kimsuky:
+- RoK-based EU defence company
+- EU embassy spearphishing suspected
+Rest of World (RoW)
+India-Nexus:
+- Bitter, SideWinder (emerging Q2 2024)
+- EU embassies targeted
+- Lures: EU-India trade, security dialogues, maritime cooperation
+Iran-Nexus:
+- MuddyWater, APT42, Charming Kitten
+- UNC3313, UNC5667 subclusters
+- Focus: Civil society, NGOs, public admin, transport
+- Diaspora surveillance
+Belarus-Nexus:
+- Ghostwriter: Poland public administration
+Houthi-Nexus:
+- OilAlpha, Rare Werewolf: Spill-over attacks
+Private Sector Offensive Actors:
+- Candiru, NSO Group, Paragon Solutions
+- Civil society targeting
+- Pegasus: Czech Republic, Poland, Spain (December 2024 - February 2025)
+- Graphite: 90 individuals globally, 15+ EU MSs (January 2025+)
+	- WhatsApp E2EE exploitation
+	- iMessage zero-click (CVE-2025-43200)
+
+7.2 Key Trends
+
+TTPs Highlights
+Physical-Layer Access:
+- APT28 nearest-neighbor Wi-Fi
+- GoldenJackal air-gap USB targeting
+Network Infrastructure:
+- UNC3886 Juniper router targeting
+- Velvet Ant Cisco NX-OS zero-days
+Language Shifts:
+- GoldenJackal: C# → Go
+- APT35 Cyclops: Go-based BellaCiao successor
+Anti-Detection:
+- SnipBot sandbox checks
+- Mustang Panda Microsoft process injection
+Linux Targeting:
+- WolfsBane, FireWood, POOLRAT
+In-Memory Execution:
+- BackdoorDiplomacy QSC framework
+- APT29 GRAPELOADER
+EU as Target & Lure
+Impersonation Tactics:
+- APT29: EU Ministry of Foreign Affairs, ENISA
+- Callisto: EU institutional correspondence
+- Storm-2372: European Parliament Committee
+- Laundry Bear: European Defence & Security Summit
+- UTA0352/UTA0355: Romania, Bulgaria officials
+- Earth Preta (APT41): EU policy documents
+- UNC3313/UNC5667: Hungarian government
+- Charming Kitten: EU journalists, think tanks
+- Kimsuky: EU diplomatic meeting invitations
+Infrastructure Abuse:
+- China ORB networks (extensive EU presence)
+- EU-hosted C2 servers
+- Compromised WordPress (Turla KAZUAR)
+Overseas Targeting:
+- EU diplomatic missions abroad
+- Development programs
+- Commercial operations
+- Cultural institutions
+- APT29: Multiple missions targeted
+Third-Party Targeting in EU:
+- Russian exiles (Callisto)
+- Middle Eastern embassy staff (Charming Kitten)
+- Asian diplomatic missions (Earth Preta)
+- Cuban embassy France (TAG-100)
+- Japanese entities via EU (MirrorFace, August 2024)
+---
+
+8. Foreign Information Manipulation
+
+
+Overview (EEAS STRATCOM Data)
+
+- 86 FIMI operations collected
+- 60.5% attributed to known IMS
+- Russia-aligned dominant
+
+8.1 Key IMS
+
+Matryoshka (18 cases - Most Active)
+- Video impersonations
+- EU institutions (Parliament, Commission)
+- EU MS security sector institutions
+- Public media outlets
+- AI-assisted voice cloning
+- First EU official voice clone (June 2025)
+- Seeder + amplifier account networks (X, Bluesky)
+- Moldova heavily targeted (election context)
+Doppelgänger (6 cases)
+- Linked to Struktura, Social Design Agency
+- Directly funded by Russian state
+- Targets: France, Germany, Poland, Union
+- Impersonates Western news/government sites
+- Large fake domain networks
+- Meta sponsored ads
+- CIB networks for distribution
+- Sanctions: EU, UK, US (December 2024)
+- Resilient: Domain re-registration, hosting migration
+Storm-1516 (5 cases)
+- 230+ inauthentic websites
+- English, French, German content
+- Information laundering (X accounts)
+- German elections focus (Q4 2024 - Q1 2025)
+- Russian government-linked individuals
+Russian Foundation to Battle Injustice (4 cases)
+- English, German, French content
+- Inauthentic articles
+- Cross-platform laundering (X, Bluesky, Reddit)
+- EU as hegemonic power narrative
+- Opposition persecution allegations
+Portal Kombat (19 cases)
+- Content amplification infrastructure
+- Used by multiple IMS
+Other IMS
+China-Aligned:
+- Green Cicada Network (August 2024)
+	- 5,000 AI-operated X accounts
+	- Western Europe targeting
+	- Yukuo Cen/Zhipu AI linked
+- Spamouflage (January 2025)
+- Spain Valencia floods exploitation
+- Government overthrow calls
+Iran-Aligned:
+- Olympics/Israel participation
+A2Z Operation:
+- Similarities to BIG ((U)notorious BIG)
+- Baku Initiative Group linked
+- Targets: France, Italy, Poland, Germany
+
+8.2 Key Trends
+
+TTPs (DISARM Framework)
+Primary Techniques:
+1. Inauthentic news articles (T0085, T0140.001, T0066)
+	- Headlines/excerpts for social media
+2. Fabricated investigations (T0085, T0023.001)
+	- Russian Foundation to Battle Injustice origin
+	- Multi-language translation
+	- Cross-platform laundering
+3. Decontextualized content (T0023.001)
+	- Quotes, images, previous publications
+	- Reframed to fit narratives
+4. False documents (T0003)
+	- "Leaked" via unattributed channels
+5. State-controlled amplification (T0023, T0140.001)
+	- Official Russian/Belarusian media
+	- Portal Kombat distribution
+6. Artificial Intelligence (14.3% of cases)
+	- Voice cloning
+	- Content generation
+	- Enhanced authenticity
+Strategic Event Exploitation (72.5% of cases)
+Polish Elections:
+- Doppelgänger campaign
+- EU interference allegations
+- Green Deal undermining
+- Russian/Belarusian media support
+Romanian Elections:
+- EU outcome manipulation accusations
+- Russian Foreign Intelligence Service press release
+- Portal Kombat amplification
+Moldovan Elections:
+- EU accession referendum context
+- LGBTIQ+ rights exploitation
+- European Commission President impersonation
+- Ambassador manipulation
+Other Events:
+- Niger EU ambassador replacement demands
+- April 2025 European power outage exploitation 
+	- Blame on EU sanctions
+---
+
+9. Hacktivism
+
+
+Overview
+
+- 79% of total incidents
+- 91.5% DDoS attacks
+- 5.1% intrusions
+- 3.4% data breaches
+- 88 hacktivist groups identified
+
+9.1 Key Threat Actors
+
+NoName057(16) - 63.1%
+- Pro-Russia, crowd-sourced (DDoSia platform)
+- Continuous high operational tempo
+- Targets: Italy, France, Poland, Lithuania, Germany
+- Sectors: Public admin (ministries, parliaments, municipalities), finance (banks, payment providers), transport (air, rail)
+- Geopolitical event-driven
+- Europol/European Parliament attacks (September 2024)
+- Belgian electoral infrastructure (7 days)
+Keymous+ - 14.1%
+- Assessed as "for-hire" opportunistic (North African origin)
+- Targets: France, Estonia, Belgium, Denmark, Germany
+- Sectors: Public admin (municipal, regional), finance (insurance, regional banks), DIS (registrars, cloud), education, media
+- ~1.5% confirmed disruptions
+Dark Storm Team - 12.1%
+- Pro-Palestine, anti-Israel
+- Targets: Poland, Finland, France, Lithuania, Germany
+- Sectors: Public admin (defence, foreign affairs), transport (aviation, airports), finance, media, manufacturing
+Mr Hamza - 7.9%
+- Pro-Palestine, anti-Israel
+- Targets: France, Spain, Germany, Lithuania, Belgium
+- Sectors: Public admin, manufacturing
+- Activity increase post-Q4 2024 (Holy League participation)
+- Operations: #op_france, #op_italia, #opromania, #opbelgium, #opnato
+RipperSec - 2.8%
+- Pro-Russia
+- Slow but steady increase
+- Targets: Public admin, media/entertainment, transport
+- Intent: OT targeting
+
+9.2 Geographic Targeting
+
+Top 5 Targeted EU MSs
+1. France (27% incidents)
+	- Top groups: NoName057(16), Keymous+, Dark Storm, Mr Hamza, RipperSec
+	- #OPFrance campaigns
+	- Permanent UNSC member visibility
+2. Italy (26.3%)
+	- Top groups: NoName057(16), Dark Storm, DXPLOIT, Mr Hamza, Alixsec
+	- #OPItaly campaigns (Q1 2025)
+	- Z-PENTEST-ALLIANCE OT targeting
+3. Poland (focus varies)
+	- Top groups: NoName057(16), Dark Storm, SERVER KILLERS, OverFlame, Keymous+
+	- Energy sector interest (Z-PENTEST-ALLIANCE)
+4. Germany
+	- Top groups: NoName057(16), Keymous+, Dark Storm, Mr Hamza, Mysterious Team Bangladesh
+	- Finance and manufacturing focus
+5. Lithuania
+	- Top groups: NoName057(16) (70%), Dark Storm, Mr Hamza, OverFlame, Z-PENTEST-ALLIANCE
+Activity Triggers
+- Ukraine support announcements
+- #OPBelgium: €1B military aid (Belgium)
+- Anonymous VNLBN: Ukraine support + Russian asset freezing (France, 27 attacks)
+- Fredens of Security: Equipment deliveries (Italy, Germany, Denmark, Poland)
+- INDOHAXSEC TEAM: Ukraine Facility approval (Belgium)
+- Electoral processes
+
+9.3 Sectoral Targeting
+
+Overall Ranking
+1. Public Administration (63.1%)
+	- Governmental websites: 51.5%
+	- Municipalities: 34%
+	- Intelligence/security services (Eastern/Northern Europe retaliation)
+2. Transport (12%)
+	- Air and rail transport
+3. Finance (11.7%)
+	- Public-facing bank portals
+4. Digital Infrastructure (5.4%)
+	- Systemic cross-border impact potential
+5. Manufacturing & Media (4% each)
+	- Defence-related, automotive (manufacturing)
+	- News outlets, broadcasters (media)
+
+9.4 Key Trends
+
+TTPs Evolution
+Advanced Techniques (Claimed):
+- Carpet bombing
+- Router leveraging
+- AI integration
+Botnets:
+- Zergeca (emerging)
+- DDoSia (evolving)
+	- DNS over HTTPS (DoH) for C2
+	- 50% increase in bot-infected devices (H1 2024)
+Ransomware Adoption:
+- CyberVolk: Own RaaS (AzzaSec, HexaLocker, Parano, LockBit, Chaos)
+- FunkSec, Lapsus$: RaaS launches
+- KillSecurity: RaaS platform (June 2024), increased April 2025
+OT Targeting:
+- Z-PENTEST-ALLIANCE: Energy, water management
+	- Internet-accessible OT interfaces
+	- Italy (most targeted), Czechia, Lithuania, Poland, Portugal, Netherlands, Spain
+	- Video sharing for psychological impact
+	- Dubious Sandworm association claim
+Emerging Threats:
+- Infrastructure Destruction Squad (IDS) (June 2025)
+	- VoltRuptor ICS-specific malware
+	- Multi-protocol support
+	- Advanced persistence, anti-forensics
+	- Cross-platform operations
+	- Available for sale (dark web)
+	- Italian smart building company compromised (June 30, 2025)
+Ecosystem Evolution
+Alliance Formation:
+- Holy League (July 2024, 70 groups)
+	- Pro-Russia (NoName057(16)) + Pro-Palestine
+	- Targets: Ukraine, Israel, NATO Allies, EU MSs
+	- Spain targeting (DDoSia arrest retaliation)
+Communication Disruptions:
+- Telegram bans (Q1 2025): 60+ aliases
+- Migration: Private Telegram, X, Element, dark web forums
+Law Enforcement:
+- Operation PowerOFF (December 2024): 27 DDoS-for-hire platforms, 3 arrests
+- May 2025 follow-up: 6 platforms offline, 4 arrests (Poland), 9 domains seized (US)
+Identity Spoofing:
+- Killmilk reappearance (May 2025, dubious)
+- NoName057(16) impersonations with ransomware decoys
+---
+
+10. TTPs & Vulnerabilities
+
+
+10.1 TTPs Overview (MITRE ATT&CK)
+
+Most Common Tactics
+1. Discovery (TA0007)
+	- Process discovery (T1057)
+	- System network configuration (T1016)
+	- System information discovery (T1082)
+	- File and directory discovery (T1083)
+	- Network share discovery (T1135)
+2. Execution (TA0002)
+	- Command and scripting interpreter (T1059 + subtechniques)
+	- WMI (T1047)
+	- Native API (T1106)
+	- Service execution (T1569.002)
+	- User execution (T1204.*)
+3. Persistence (TA0003)
+	- Windows Service (T1543.003)
+	- Modify Registry (T1112)
+	- Logon/Registry autostart (T1547.*)
+	- Create Account (T1136)
+	- Valid/Domain/Local Accounts (T1078.*)
+4. Exfiltration (TA0010)
+	- Exfiltration over C2 (T1041)
+	- Asymmetric encrypted non-C2 (T1048.*)
+	- USB exfiltration (T1052.001)
+	- Cloud storage (T1567.*)
+5. Impact (TA0040)
+	- Data destruction (T1485)
+	- Data encrypted for impact (T1486)
+	- Service stop (T1489)
+	- Inhibit system recovery (T1490)
+	- Internal defacement (T1491.001)
+TTP Clustering Patterns
+- Discovery techniques frequently enumerated together
+- Execution techniques center on command/scripting interpreters
+- Persistence techniques layered for redundancy
+- Smaller coherent blocks for exfiltration and impact
+
+10.2 Vulnerabilities
+
+Disclosure Statistics (Reporting Period)
+- Total: 42,595 new vulnerabilities (+27% YoY)
+- CVSS Distribution:
+	- Critical: 7%
+	- High: 26%
+	- Medium: 43%
+	- Low: 3%
+	- Unscored: 21%
+Attack Vector
+- Network: 64% (remote exploitation risk for Internet-facing systems)
+Top 25 Weaknesses (CWE)
+Rank
+CWE-ID
+Name
+Score
+KEV CVEs
+Change vs 2023
+1
+CWE-79
+XSS
+56.92
+3
++1
+2
+CWE-787
+Out-of-bounds Write
+45.2
+18
+-1
+3
+CWE-89
+SQL Injection
+35.88
+4
+0
+4
+CWE-352
+CSRF
+19.57
+0
++5
+5
+CWE-22
+Path Traversal
+12.74
+4
++3
+6
+CWE-125
+Out-of-bounds Read
+11.42
+3
++1
+7
+CWE-78
+OS Command Injection
+11.3
+5
+-2
+8
+CWE-416
+Use After Free
+10.19
+5
+-4
+9
+CWE-862
+Missing Authorization
+10.11
+0
++2
+10
+CWE-434
+Unrestricted File Upload
+10.03
+0
+0
+Top Vendors with Disclosed Vulnerabilities
+1. Microsoft
+2. Adobe
+3. Qualcomm Inc.
+Note: Linux numbers inflated by CVE assignment policies (includes bug fixes)
+Known Exploited Vulnerabilities (KEV)
+- 245 vulnerabilities added to CISA KEV during reporting period
+Top 10 KEV Vendors:
+(Distribution shown in report Figure 47)
+Top 3 KEV CWEs:
+1. CWE-78: OS Command Injection
+2. CWE-22: Path Traversal
+3. CWE-416: Use After Free
+Impact: In-memory modification, code execution, full system control, crashes, DoS, availability issues
+EU-Targeted Vulnerabilities
+- 115 exploited vulnerabilities documented in EU incidents (open-source)
+Notable Exploited Vulnerabilities:
+Internet-Facing Applications (T1190)
+- Confluence, Exchange (ProxyLogon/ProxyShell)
+- Citrix NetScaler
+- Fortinet/Check Point/Palo Alto VPN appliances
+- PaperCut, TeamCity, ActiveMQ, vCenter, Zimbra
+Local Privilege Escalation (T1068)
+- PwnKit
+- Windows CLFS
+Client Execution (T1203)
+- Office Equation Editor
+- WinRAR
+- Browser zero-days
+- Phishing delivery (T1566.001)
+- Drive-by compromise (T1189)
+Sample Critical Vulnerabilities:
+CVE
+CVSS
+Product
+Vendor
+Context
+CVE-2024-3400
+10.0
+PAN-OS
+Palo Alto Networks
+GlobalProtect RCE
+CVE-2023-46604
+10.0
+ActiveMQ
+Apache
+Unauthenticated RCE
+CVE-2024-0012
+9.3
+Cloud NGFW
+Palo Alto Networks
+Authentication bypass
+CVE-2023-22527
+9.8
+Confluence
+Atlassian
+SSTI injection
+CVE-2024-27198
+9.8
+TeamCity
+JetBrains
+Authentication bypass
+
+10.3 Mitigations Framework
+
+System Hardening
+- Execution Prevention (M1038)
+- Behaviour Prevention on Endpoint (M1040)
+- Operating System Configuration (M1028)
+- Software Configuration (M1054)
+- Active Directory Configuration (M1015)
+- Registry Permissions (M1024)
+- File/Directory Permissions (M1022)
+- Library Loading Restrictions (M1044)
+- Code Signing (M1045)
+- Disable/Remove Feature (M1042)
+Access & Privilege Management
+- User Account Management (M1018)
+- Privileged Account Management (M1026)
+- User Account Control (M1052)
+- Software Installation Limits (M1033)
+- Password Policies (M1027)
+- Multi-Factor Authentication (M1032)
+- Account Use Policies (M1035)
+Network Protections
+- Network Intrusion Prevention (M1031)
+- Filter Network Traffic (M1037)
+- Network Segmentation (M1030)
+- Restrict Web-Based Content (M1021)
+- Limit Network Resource Access (M1048)
+Monitoring
+- Audit (M1047)
+- Application Developer Guidance (M1013)
+- Account Use Policies (M1035)
+- Network Resource Access Limits (M1048)
+Resilience
+- Data Backup (M1053)
+- Remote Data Storage (M1029)
+- Data Loss Prevention (M1057)
+- Encrypt Sensitive Information (M1041)
+- Update Software (M1051)
+- Antivirus/Antimalware (M1049)
+- User Training (M1017)
+Malware-Specific Prioritization
+Loaders:
+- Execution prevention
+- Registry/DLL restrictions
+- Software installation controls
+- Initial foothold prevention
+Ransomware:
+- Backup and remote storage (critical)
+- Data loss prevention
+- Network segmentation
+- Identity management (password policies, MFA)
+- Business continuity focus
+RATs:
+- Long-term persistence controls
+- Library loading restrictions
+- Account use policies
+- Stealthy C2 detection
+---
+
+11. Key Recommendations
+
+
+Strategic Level
+
+1. Intelligence-Driven Defense
+- Implement continuous threat hunting
+- Integrate cyber risk management into operational frameworks
+- Prioritize behavioral detection over signature-based
+- Leverage threat intelligence sharing platforms
+2. Regulatory Compliance & Framework Alignment
+- Cyber Resilience Act (CRA): Embed security-by-design
+- Cyber Solidarity Act (CSoA): Enhance cross-border response
+- Cybersecurity Blueprint: Standardize escalation procedures
+- NIS2 Directive: Align with sector-specific requirements
+3. Collaboration & Information Sharing
+- Strengthen Member State cooperation
+- EU institution coordination
+- Private-public partnerships
+- CSIRTs Network engagement
+- CyCLONe operational support
+
+Operational Level
+
+4. Vulnerability Management
+- Comprehensive asset discovery
+- Automated vulnerability scanning
+- Prioritize patching based on KEV catalog
+- Patch availability within days of disclosure
+- Zero-day response procedures
+5. Supply Chain Security
+- Third-party risk assessments
+- Vendor security requirements
+- Repository monitoring (npm, PyPI)
+- Browser extension vetting
+- Software composition analysis
+- Secret sprawl prevention
+6. Identity & Access Management
+- Multi-factor authentication (mandatory)
+- Privileged account management
+- Password policy enforcement
+- Regular access reviews
+- Principle of least privilege
+7. Endpoint & Network Protection
+- EDR deployment and monitoring
+- Network segmentation implementation
+- Intrusion detection/prevention systems
+- Web content filtering
+- Email security gateways (anti-phishing)
+8. Resilience & Recovery
+- Offline backup strategy (3-2-1 rule)
+- Backup testing and validation
+- Incident response playbooks
+- Business continuity planning
+- Disaster recovery exercises
+9. User Awareness
+- Regular phishing simulations
+- Security awareness training
+- Incident reporting procedures
+- Social engineering education
+- Mobile device security guidance
+
+Tactical Level
+
+10. Threat-Specific Mitigations
+Phishing:
+- Email authentication (SPF, DKIM, DMARC)
+- Link/attachment sandboxing
+- User reporting mechanisms
+- ClickFix awareness campaigns
+Ransomware:
+- Disable unnecessary services
+- Restrict PowerShell execution
+- Monitor for encryption activities
+- Network traffic analysis
+- RDP hardening
+State-Nexus:
+- VPN zero-trust architecture
+- Diplomatic network isolation
+- Privileged access workstations
+- Enhanced logging and monitoring
+- Regular security audits
+Hacktivism (DDoS):
+- CDN/DDoS protection services
+- Rate limiting implementation
+- Geo-blocking capabilities
+- Incident response procedures
+- Communications strategy
+AI Threats:
+- AI tool vetting procedures
+- Model validation and testing
+- Supply chain security for ML
+- Awareness of AI-generated content
+- Detection capability development
+11. Mobile Security
+- Mobile device management (MDM)
+- Application vetting
+- OS update policies
+- Secure messaging guidance
+- BYOD security policies
+12. OT/ICS Protection
+- Air-gap critical systems
+- Network segmentation (IT/OT)
+- Restrict remote access
+- Monitor for abnormal activities
+- Incident response for OT
+
+Continuous Improvement
+
+13. Monitoring & Detection
+- SIEM deployment and tuning
+- Log aggregation and retention
+- Threat hunting programs
+- Indicators of Compromise (IoC) integration
+- Automated alerting
+14. Metrics & Reporting
+- Key performance indicators (KPIs)
+- Security posture dashboards
+- Incident trends analysis
+- Risk scoring and tracking
+- Executive reporting
+15. Training & Exercises
+- Red team exercises
+- Tabletop exercises
+- Crisis management drills
+- Lessons learned processes
+- Capability development programs
+---
+
+Appendix: Quick Reference
+
+
+Threat Actor Quick Reference
+
+Category
+Key Actors
+Primary TTPs
+Sectors
+Russia-Nexus
+APT29, APT28, Sandworm
+Spearphishing, RDP campaigns, Wi-Fi attacks
+Public Admin, Defence, DIS
+China-Nexus
+UNC5221, Mustang Panda, APT41, Salt Typhoon
+ORB networks, supply chain, telecommunications
+Public Admin, Transport, DIS
+DPRK-Nexus
+Famous Chollima, Lazarus, Kimsuky
+IT worker scams, job themes, npm packages
+Finance, Crypto, Technology
+Cybercrime
+Akira, SafePay, Qilin, Lumma
+Ransomware, infostealers, IAB
+Manufacturing, DIS, Finance
+Hacktivism
+NoName057(16), Keymous+, Dark Storm
+DDoS, website defacement
+Public Admin, Transport, Finance
+
+Critical Vulnerability Categories
+
+1. OS Command Injection (CWE-78)
+2. Path Traversal (CWE-22)
+3. Use After Free (CWE-416)
+4. Out-of-bounds Write (CWE-787)
+5. SQL Injection (CWE-89)
+
+Priority Actions by Threat
+
+Ransomware
+1. Offline backups (test regularly)
+2. Network segmentation
+3. Privileged access management
+4. EDR deployment
+5. User training
+State-Nexus
+1. Patch zero-days immediately
+2. VPN security hardening
+3. Diplomatic network isolation
+4. Enhanced monitoring
+5. Threat intelligence integration
+Hacktivism
+1. DDoS protection services
+2. Alternative communication channels
+3. Crisis communication plan
+4. Public-facing asset inventory
+5. Rapid response procedures
+Supply Chain
+1. Vendor security assessments
+2. Software composition analysis
+3. Repository monitoring
+4. Code signing verification
+5. Third-party access controls
+---
+Document Version: 1.0
+Based on: ENISA Threat Landscape 2025 (October 2025)
+Coverage Period: July 2024 - June 2025
